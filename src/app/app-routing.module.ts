@@ -18,12 +18,12 @@ const routes: Routes = [
     loadChildren: () => import('./features/about/about.module').then(m => m.AboutModule),
   },
   {
-    path: 'secured-feat',
+    path: 'lecture1',
     canActivate: [AuthGuardService],
     loadChildren: () =>
-      import('./features/secured-feat/secured-feat.module').then(
-        m => m.SecuredFeatModule
-      ),
+    import('./features/lecture1/lecture1.module').then(
+      m => m.LectureOneModule
+    ),
   },
   {
     path: '**',
