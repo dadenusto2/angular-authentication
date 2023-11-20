@@ -32,10 +32,10 @@ const routes: Routes = [
     ),
   },
   {
-    path: 'lecture2',
+    path: 'lecture3',
     loadChildren: () =>
-    import('./features/lecture3/lecture2.module').then(
-      m => m.LectureTwoModule
+    import('./features/lecture3/lecture3.module').then(
+      m => m.LectureThreeModule
     ),
   },
   {

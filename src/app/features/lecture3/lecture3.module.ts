@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { TuiButtonModule } from '@taiga-ui/core';
 
 import { IconModule } from '../../shared/ui/icon/icon.module';
-import { LectureTwoComponent } from './lecture2.component';
+import { LectureThreeComponent } from './lecture3.component';
 
-const routes: Routes = [{ path: '', component: LectureTwoComponent }];
+const routes: Routes = [{ path: '', component: LectureThreeComponent }];
 
 @NgModule({
   imports: [CommonModule, TuiButtonModule, RouterModule.forChild(routes), IconModule],
-  declarations: [LectureTwoComponent],
+  declarations: [LectureThreeComponent],
 })
-export class LectureTwoModule {}
+export class LectureThreeModule {}
