@@ -26,6 +26,14 @@ const routes: Routes = [
     ),
   },
   {
+    path: 'lecture2',
+    canActivate: [AuthGuardService],
+    loadChildren: () =>
+    import('./features/lecture2/lecture2.module').then(
+      m => m.LectureTwoModule
+    ),
+  },
+  {
     path: '**',
     redirectTo: 'home',
   },
