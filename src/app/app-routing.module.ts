@@ -19,7 +19,6 @@ const routes: Routes = [
   },
   {
     path: 'lecture1',
-    canActivate: [AuthGuardService],
     loadChildren: () =>
     import('./features/lecture1/lecture1.module').then(
       m => m.LectureOneModule
@@ -27,9 +26,15 @@ const routes: Routes = [
   },
   {
     path: 'lecture2',
-    canActivate: [AuthGuardService],
     loadChildren: () =>
     import('./features/lecture2/lecture2.module').then(
+        m => m.LectureTwoModule
+    ),
+  },
+  {
+    path: 'lecture2',
+    loadChildren: () =>
+    import('./features/lecture3/lecture2.module').then(
       m => m.LectureTwoModule
     ),
   },
