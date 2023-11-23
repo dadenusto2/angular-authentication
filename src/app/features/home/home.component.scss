@@ -1,0 +1,23 @@
+p {
+    font-size: x-large;
+    line-height: normal;
+}
+
+a:link {
+    color: #000000;
+    border-bottom: 1px dashed;
+}
+
+a:visited {
+    color: #9340a3;
+}
+
+a:hover {
+    color: #154088;
+    border-bottom: .07em solid;
+}
+
+a:active {
+    color: #497DDD;
+    border-bottom: 1px dashed;
+}
