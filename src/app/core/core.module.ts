@@ -10,16 +10,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { environment } from '../../environments/environment';
 import { AuthModule } from '../auth/auth.module';
 import { authInterceptorProviders } from '../auth/interceptors';
-import { FakeApiService } from './fake-api';
 
 @NgModule({
   imports: [
     // Angular
     CommonModule,
     HttpClientModule,
-
-    // Fake Auth API: Remove this in real apps
-    HttpClientInMemoryWebApiModule.forRoot(FakeApiService),
 
     // NgRx
     StoreModule.forRoot({}, {}),

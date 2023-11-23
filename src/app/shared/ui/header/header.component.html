@@ -1,5 +1,40 @@
 <header>
   <div class="aa--flex aa--items-center">
+    <!-- BEGIN: Menu Dropdown -->
+    <div class="aa--inline lg:aa--hidden">
+      <tui-hosted-dropdown [content]="dropdownMenu">
+        <button
+          tuiIconButton
+          type="button"
+          appearance="flat"
+          size="m"
+          class="aa--mr-2"
+          icon="tuiIconAlignJustifyLarge"
+        ></button>
+      </tui-hosted-dropdown>
+      <ng-template #dropdownMenu>
+        <tui-data-list role="menu">
+          <a
+            *ngFor="let item of menuItems"
+            #rla="routerLinkActive"
+            tuiOption
+            role="menuitemradio"
+            routerLinkActive
+            [attr.aria-checked]="rla.isActive"
+            [routerLink]="item.link"
+          >
+            {{ item.label }}
+            <tui-svg *ngIf="rla.isActive" src="tuiIconCheckLarge"></tui-svg>
+          </a>
+        </tui-data-list>
+      </ng-template>
+    </div>
+    <!-- END: Menu Dropdown -->
+    <a routerLink="/home" class="aa--flex aa--items-center">
+      <img src="/assets/logo.svg" class="logo-icon" />
+      <span class="aa--text-xl aa--font-semibold">
+      </span>
+    </a>
     <div class="menu-items aa--hidden lg:aa--inline">
       <a
         *ngFor="let item of menuItems"
